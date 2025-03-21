@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Owner Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Glassmorphism Navbar */
+        .glass-navbar {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Animated Background with Changing Images */
+        body {
+            background-size: cover;
+            background-position: center;
+            animation: bgChange 15s infinite alternate;
+        }
+
+        @keyframes bgChange {
+            0%   { background-image: url('assets/images/turf1.jpg'); }
+            50%  { background-image: url('assets/images/turf2.jpg'); }
+            100% { background-image: url('assets/images/turf3.jpg'); }
+        }
+
+        /* Glassmorphism Login Form */
+        .glass-form {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 24px;
+            width: 350px;
+            color: white;
+        }
+
+        /* Navbar Buttons */
+        .nav-btn {
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(to right, #1e40af, #2563eb);
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.4);
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col items-center text-white">
+
+    <!-- ✅ Navbar -->
+    <nav class="glass-navbar fixed top-0 w-full px-6 py-4 flex justify-between items-center z-10">
+        <h1 class="text-4xl font-bold text-white tracking-wide">Turf Booking Master</h1>
+        <ul class="flex space-x-6 text-lg">
+            <li><a href="index.html" class="nav-btn text-white">Home</a></li>
+            <li><a href="about.html" class="nav-btn text-white">About</a></li>
+            <li><a href="contact.html" class="nav-btn text-white">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ✅ Login Form Section -->
+    <section class="h-screen flex flex-col items-center justify-center text-center">
+        <div class="glass-form">
+            <h2 class="text-3xl font-bold mb-4">Turf Owner Login</h2>
+            <form id="ownerLoginForm" class="space-y-4">
+                <input type="email" id="ownerEmailLogin" placeholder="Email" class="w-full p-3 rounded bg-gray-800 text-white focus:ring-2 focus:ring-blue-500">
+                <input type="password" id="ownerPasswordLogin" placeholder="Password" class="w-full p-3 rounded bg-gray-800 text-white focus:ring-2 focus:ring-blue-500">
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg transition text-white font-semibold shadow-md">
+                    Login
+                </button>
+            </form>
+            <p class="text-gray-300 text-sm mt-4">New here? <a href="owner-register.html" class="text-blue-400 underline">Register</a></p>
+        </div>
+    </section>
+
+    <script type="module" src="assets/js/authTurfOwner.js"></script>
+
+</body>
+</html>

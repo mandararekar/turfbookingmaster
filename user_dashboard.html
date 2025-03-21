@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ✅ Background Animation */
+        body {
+            background-size: cover;
+            background-position: center;
+            animation: bgChange 15s infinite alternate;
+        }
+
+        @keyframes bgChange {
+            0%   { background-image: url('../assets/images/turf1.jpg'); }
+            50%  { background-image: url('../assets/images/turf2.jpg'); }
+            100% { background-image: url('../assets/images/turf3.jpg'); }
+        }
+
+        /* ✅ Glassmorphism Effect */
+        .glass-card {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            color: black;
+        }
+
+        /* ✅ Navbar */
+        .glass-navbar {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* ✅ Buttons */
+        .modern-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .modern-btn:hover {
+            background: linear-gradient(to right, #1e40af, #2563eb);
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- ✅ Navbar -->
+    <nav class="glass-navbar fixed top-0 w-full px-6 py-4 flex justify-between items-center z-10">
+        <h1 class="text-white font-bold text-2xl">Turf Booking Master</h1>
+        <button onclick="logout()" class="modern-btn">Logout</button>
+    </nav>
+
+    <!-- ✅ User Info -->
+    <div class="max-w-4xl mx-auto p-6 glass-card mt-24 text-black">
+        <h2 class="text-2xl font-semibold">Welcome, <span id="userName"></span></h2>
+        <p class="text-lg">Email: <span id="userEmail"></span></p>
+    </div>
+
+    <!-- ✅ Available Turfs -->
+    <div id="turfList" class="max-w-6xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    <!-- ✅ User Bookings -->
+    <div id="myBookings" class="max-w-6xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    <!-- ✅ Load JS -->
+    <script src="../assets/js/userDashboard.js" type="module"></script>
+
+</body>
+</html>

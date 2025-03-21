@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Glassmorphism Navbar */
+        .glass-navbar {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Background with Changing Images */
+        .hero-bg {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            animation: bgChange 15s infinite alternate;
+        }
+
+        @keyframes bgChange {
+            0%   { background-image: url('assets/images/turf1.jpg'); }
+            50%  { background-image: url('assets/images/turf2.jpg'); }
+            100% { background-image: url('assets/images/turf3.jpg'); }
+        }
+
+        /* Modern Navbar Buttons */
+        .nav-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(to right, #1e40af, #2563eb);
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Modern Action Buttons */
+        .modern-btn {
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            padding: 14px 28px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .modern-btn:hover {
+            background: linear-gradient(to right, #1e40af, #2563eb);
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(37, 99, 235, 0.5);
+        }
+
+        /* Grassy Text Effect */
+        .grassy-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 0px #228B22, 4px 4px 0px #006400, 6px 6px 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- ✅ Adjusted Navbar (Glass Effect) -->
+    <nav class="glass-navbar fixed top-0 w-full px-6 py-4 flex justify-between items-center z-10">
+        <h1 class="grassy-text text-4xl tracking-wide">Turf Booking Master</h1>
+        <ul class="flex space-x-6 text-xl">
+            <li><a href="index.html" class="nav-btn text-white">Home</a></li>
+            <li><a href="about.html" class="nav-btn text-white">About</a></li>
+            <li><a href="contact.html" class="nav-btn text-white">Contact</a></li>
+        </ul>
+    </nav>
+
+ <!-- ✅ Hero Section with Changing Background Images -->
+<section class="hero-bg flex flex-col items-center justify-center text-center px-6">
+    <h2 class="text-6xl font-extrabold mb-4 drop-shadow-lg tracking-tight">Book Your Turf Instantly!</h2>
+    <p class="text-xl text-gray-200 mb-6 drop-shadow-lg max-w-2xl">Seamless booking with real-time availability and instant confirmation.</p>
+    
+    <!-- ✅ Buttons including Turf Owner Panel -->
+    <div class="flex flex-wrap justify-center gap-6">
+        <a href="user.html" class="modern-btn">User Panel</a>
+        <a href="ownerlogin.html" class="modern-btn bg-green-600 hover:bg-green-700 shadow-lg">Turf Owner Panel</a>
+        <a href="adminlogin.html" class="modern-btn bg-red-600 hover:bg-red-700 shadow-lg">Admin Panel</a>
+    </div>
+</section>
+
+
+    <!-- ✅ Footer -->
+    <footer class="bg-gray-800 text-gray-300 text-center py-4">
+        <p>© 2025 Turf Booking System | Designed for Speed & Simplicity</p>
+    </footer>
+
+    <!-- ✅ External JavaScript File -->
+    <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

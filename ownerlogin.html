@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turf Owner Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-size: cover;
+      background-position: center;
+      animation: bgChange 15s infinite alternate;
+    }
+    @keyframes bgChange {
+      0% { background-image: url('assets/images/turf1.jpg'); }
+      50% { background-image: url('assets/images/turf2.jpg'); }
+      100% { background-image: url('assets/images/turf3.jpg'); }
+    }
+    .glass-navbar {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .glass-card {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 12px;
+    }
+    .grassy-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 2px 2px 0px #228B22, 4px 4px 0px #006400;
+    }
+  </style>
+</head>
+<body class="h-screen flex flex-col items-center justify-center text-white">
+
+  <!-- ✅ Navbar -->
+  <nav class="glass-navbar fixed top-0 w-full px-6 py-4 flex justify-between items-center z-10">
+    <h1 class="grassy-text">Turf Owner Login</h1>
+    <a href="index.html" class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">Back to Home</a>
+  </nav>
+
+  <!-- ✅ Login Card -->
+  <div class="glass-card w-full max-w-md text-center mt-24">
+    <h2 class="text-2xl font-bold text-white mb-6">Login to Your Turf Panel</h2>
+    <input type="text" id="email" placeholder="Email" class="w-full mb-4 px-4 py-2 rounded text-black" />
+    <input type="password" id="password" placeholder="Password" class="w-full mb-4 px-4 py-2 rounded text-black" />
+    <button id="loginBtn" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded">Login</button>
+    <p id="errorMsg" class="text-red-500 mt-4 hidden">Invalid credentials!</p>
+  </div>
+
+  <script type="module" src="assets/js/ownerlogin.js"></script>
+</body>
+</html>

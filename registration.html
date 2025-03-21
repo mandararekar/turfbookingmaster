@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background Changing Images */
+        body {
+            background-size: cover;
+            background-position: center;
+            animation: bgChange 15s infinite alternate;
+        }
+
+        @keyframes bgChange {
+            0%   { background-image: url('assets/images/turf1.jpg'); }
+            50%  { background-image: url('assets/images/turf2.jpg'); }
+            100% { background-image: url('assets/images/turf3.jpg'); }
+        }
+
+        /* Glassmorphism Navbar */
+        .glass-navbar {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Grassy Text Effect */
+        .grassy-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 0px #228B22, 4px 4px 0px #006400, 6px 6px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Blue Navbar Buttons */
+        .nav-btn {
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 600;
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(to right, #1e40af, #2563eb);
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Glassmorphism Form */
+        .glass-card {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Animated Input */
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col items-center justify-center text-white">
+
+    <!-- ✅ Navbar -->
+    <nav class="glass-navbar fixed top-0 w-full px-6 py-4 flex justify-between items-center z-10">
+        <h1 class="grassy-text tracking-wide">Turf Booking Master</h1>
+        <ul class="flex space-x-6 text-lg">
+            <li><a href="index.html" class="nav-btn text-white">Home</a></li>
+            <li><a href="about.html" class="nav-btn text-white">About</a></li>
+            <li><a href="contact.html" class="nav-btn text-white">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Registration Form -->
+    <div class="glass-card p-8 rounded-xl w-96 mt-20">
+        <h2 class="text-3xl font-bold text-center mb-6">Create an Account</h2>
+        
+        <input type="text" id="name" placeholder="Full Name" class="w-full p-3 mb-3 bg-gray-700 text-white rounded-lg outline-none focus:ring-2">
+        <input type="tel" id="contact" placeholder="Contact Number" class="w-full p-3 mb-3 bg-gray-700 text-white rounded-lg outline-none focus:ring-2">
+        <input type="email" id="email" placeholder="Email" class="w-full p-3 mb-3 bg-gray-700 text-white rounded-lg outline-none focus:ring-2">
+        <input type="password" id="password" placeholder="Password" class="w-full p-3 mb-4 bg-gray-700 text-white rounded-lg outline-none focus:ring-2">
+        
+        <button onclick="registerUser()" class="w-full py-3 bg-blue-600 hover:bg-blue-700 transition rounded-lg text-lg font-semibold">
+            Register
+        </button>
+        
+        <p class="mt-4 text-center text-gray-300">Already have an account? 
+            <a href="user-login.html" class="text-blue-400">Login</a>
+        </p>
+    </div>
+
+    <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>

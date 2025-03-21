@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Turf Booking Master</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Background Animation and Glass Effect -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-white flex flex-col">
+
+  <!-- 🔷 Glassy Navbar (Same as Admin Page) -->
+  <nav class="glass flex justify-between items-center px-8 py-4 shadow-lg sticky top-0 z-50">
+    <div class="text-2xl font-bold text-white">Turf Booking Master</div>
+    <ul class="flex gap-6 text-lg font-medium">
+      <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+      <li><a href="user.html" class="hover:text-blue-400 transition">User</a></li>
+      <li><a href="owner.html" class="hover:text-blue-400 transition">Turf Owner</a></li>
+      <li><a href="admin.html" class="hover:text-blue-400 transition">Admin</a></li>
+      <li><a href="contact.html" class="hover:text-blue-400 transition">Contact</a></li>
+      <li><a href="about.html" class="text-blue-400 underline">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🧾 About Section -->
+  <main class="flex-1 flex items-center justify-center px-6 py-10">
+    <div class="glass p-10 rounded-xl max-w-4xl w-full text-center">
+      <h1 class="text-4xl font-extrabold mb-6 text-white">About Turf Booking Master</h1>
+      <p class="text-lg text-gray-200 leading-relaxed mb-4">
+        Turf Booking Master is a smart web platform built to connect players and turf owners. Our goal is to make turf booking seamless and easy—whether you're looking for a game slot or managing your own turf.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 text-left mt-8">
+        <div class="space-y-3">
+          <h2 class="text-xl font-semibold text-white">For Users</h2>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Register and login securely</li>
+            <li>Explore turfs by location, price, and time</li>
+            <li>Book slots easily and pay via QR</li>
+            <li>Real-time slot locking prevents double bookings</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-xl font-semibold text-white">For Turf Owners</h2>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Manage turfs and pricing</li>
+            <li>View all bookings in real time</li>
+            <li>Close slots manually if needed</li>
+            <li>Simple dashboard with modern UI</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-10 text-gray-400 text-sm">
+        Admins have full control of the platform, including turf approval and system moderation. Built for convenience, security, and modern needs.
+      </p>
+    </div>
+  </main>
+
+  <!-- 📢 Footer -->
+  <footer class="text-center py-4 text-sm text-gray-300">
+    &copy; 2025 Turf Booking Master. Crafted with ❤️ for the game.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Turf Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ✅ Background with Changing Images */
+        body {
+            background-size: cover;
+            background-position: center;
+            animation: bgChange 15s infinite alternate;
+        }
+
+        @keyframes bgChange {
+            0%   { background-image: url('assets/images/turf1.jpg'); }
+            50%  { background-image: url('assets/images/turf2.jpg'); }
+            100% { background-image: url('assets/images/turf3.jpg'); }
+        }
+
+        /* ✅ Glassmorphism Navbar */
+        .glass-navbar {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* ✅ Login Form Styling */
+        .glass-card {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        /* ✅ Enhanced Buttons */
+        .btn-blue {
+            background-color: #3b82f6;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-blue:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col items-center text-white">
+
+    <!-- ✅ Navbar -->
+    <nav class="glass-navbar fixed top-0 w-full px-6 py-4 flex justify-between items-center z-10">
+        <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+        <ul class="flex space-x-6 text-lg">
+            <li><a href="index.html" class="btn-blue">Home</a></li>
+            <li><a href="about.html" class="btn-blue">About</a></li>
+            <li><a href="contact.html" class="btn-blue">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ✅ Login Form -->
+    <form id="adminLoginForm" class="glass-card w-96 mt-32 text-center">
+        <h2 class="text-4xl font-bold mb-6 text-blue-500">Admin Login</h2>
+        <input type="text" id="adminUsername" placeholder="Admin Username" required 
+            class="w-full p-3 mb-3 rounded bg-gray-800 text-white border border-gray-600">
+        <input type="password" id="adminPassword" placeholder="Password" required 
+            class="w-full p-3 mb-3 rounded bg-gray-800 text-white border border-gray-600">
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded text-white font-bold">
+            Login
+        </button>
+        <p id="errorMsg" class="text-red-500 mt-3 hidden">Invalid Credentials</p>
+    </form>
+
+    <!-- ✅ External JavaScript -->
+    <script type="module" src="assets/js/admin_login.js"></script>
+
+</body>
+</html>
